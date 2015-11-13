@@ -17,6 +17,8 @@ function article(state = initialState.articles, action = undefined) {
 }
 
 export default function article(state = initialState, action = undefined) {
+    console.log(action.type);
+    console.log(types.ADD_ARTICLE);
     switch (action.type) {
         case types.ADD_ARTICLE:
             return article(state.articles, action);

@@ -1,11 +1,14 @@
 'use strict';
 
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addArticle } from '../actions';
 import Preview from './Preview'
 import Form from './Form'
 
-export default class App extends Component {
+class App extends Component {
     render() {
+        const { dispatch } = this.props;
         return (
             <div>
                 <Preview />
@@ -14,3 +17,7 @@ export default class App extends Component {
         )
     }
 }
+
+export default connect(
+
+)(App)
