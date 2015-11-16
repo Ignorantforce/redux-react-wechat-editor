@@ -9,9 +9,7 @@ import thunk from 'redux-thunk'
 import reducer from './reduces'
 import App from './containers/App'
 
-// Redux DevTools store enhancers
 import { devTools, persistState } from 'redux-devtools';
-// React components for Redux DevTools
 import { DevTools, DebugPanel, LogMonitor } from 'redux-devtools/lib/react';
 
 const middleware = process.env.NODE_ENV === 'production' ? [thunk] : [thunk, logger()];

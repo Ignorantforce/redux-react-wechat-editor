@@ -1,18 +1,26 @@
 'use strict';
 
 import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+import { addArticle } from '../actions'
 
-export default class Preview extends Component {
+class Preview extends Component {
     render() {
-        const { onAddArticleClick } = this.props;
+        const { dispatch } = this.props;
         return (
             <div>
-                <div onClick={onAddArticleClick}>Add</div>
+                <div onClick={() => dispatch(addArticle())}>Add</div>
             </div>
         )
     }
 }
 
-Preview.propTypes = {
-
+const mapStateToProps = (state) => {
+    return {
+        articles: state.article['articles']
+    }
 };
+
+export default connect(
+    mapStateToProps
+)(Preview)

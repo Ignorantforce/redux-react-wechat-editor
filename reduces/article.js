@@ -6,22 +6,24 @@ const initialState = {
     articles: []
 };
 
-function article(state = initialState.articles, action = undefined) {
-    switch (action.type) {
-        case types.ADD_ARTICLE:
-            break;
-        default:
-            return state;
-    }
-    return state;
+function addArticle(state) {
+    return [...state, {
+        title: '',
+        thumbMediaId: '',
+        author: '',
+        digest: '',
+        showCoverPic: false,
+        content: '',
+        contentSourceUrl: ''
+    }];
 }
 
 export default function article(state = initialState, action = undefined) {
-    console.log(action.type);
-    console.log(types.ADD_ARTICLE);
     switch (action.type) {
         case types.ADD_ARTICLE:
-            return article(state.articles, action);
+            return {
+                articles: addArticle(state.articles)
+            };
         default:
             return state;
     }
