@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 import reducer from './reduces'
-import App from './containers/App'
+import Editor from './containers/Editor'
 
 import { devTools, persistState } from 'redux-devtools';
 import { DevTools, DebugPanel, LogMonitor } from 'redux-devtools/lib/react';
@@ -24,11 +24,8 @@ const store = finalCreateStore(reducer);
 render(
     <div>
         <Provider store={store}>
-            <App />
+            <Editor />
         </Provider>
-        <DebugPanel top right bottom>
-            <DevTools store={store} monitor={LogMonitor}/>
-        </DebugPanel>
     </div>,
-    document.getElementById('root')
+    document.getElementById('wechat-article-editor')
 );

@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import Preview from './Preview'
 import Form from './Form'
 
-class App extends Component {
+class Editor extends Component {
     render() {
         return (
             <div>
@@ -16,4 +16,4 @@ class App extends Component {
 }
 
 
-export default App
+export default Editor

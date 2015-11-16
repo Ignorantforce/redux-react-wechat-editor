@@ -18,11 +18,20 @@ function addArticle(state) {
     }];
 }
 
+function deleteArticle(state, articleIdx) {
+    state.splice(articleIdx, 1);
+    return [...state];
+}
+
 export default function article(state = initialState, action = undefined) {
     switch (action.type) {
         case types.ADD_ARTICLE:
             return {
                 articles: addArticle(state.articles)
+            };
+        case types.DELETE_ARTICLE:
+            return {
+                articles: deleteArticle(state.articles, action.articleIdx)
             };
         default:
             return state;
