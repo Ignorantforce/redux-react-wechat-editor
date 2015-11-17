@@ -1,11 +1,14 @@
 var path = require('path'),
-    webpack = require('webpack');
+    webpack = require('webpack'),
+    autoprefixer = require('autoprefixer-core'),
+    csswring = require('csswring');
 
 module.exports = {
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'source-map',
     entry: [
         'webpack-hot-middleware/client?reload=true',
-        './index'
+        './index',
+        './static/styles/base.scss'
     ],
     output: {
         path: path.join(__dirname, 'dist'),
@@ -28,7 +31,18 @@ module.exports = {
                 test: /\.json$/,
                 loaders: ['json'],
                 exclude: /node_modules/
+            },
+            {
+                test: /\.scss$/,
+                loader: 'style!css!postcss!sass'
             }
         ]
-    }
+    },
+    sassLoader: {
+        includePaths: [path.resolve(__dirname, "./styles")]
+    },
+    postcss: [autoprefixer, csswring],
+    reslove:[
+        './static'
+    ]
 };

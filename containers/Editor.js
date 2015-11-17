@@ -7,8 +7,8 @@ import Form from './Form'
 class Editor extends Component {
     render() {
         return (
-            <div>
-                <Preview />
+            <div className="editor-preview">
+                <Preview/>
                 <Form />
             </div>
         )
