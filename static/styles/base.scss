@@ -55,6 +55,7 @@ body {
             display: none;
             position: absolute;
             text-align: center;
+            top:0;
             &:before{
                 display: inline-block;
                 content: '';
@@ -68,7 +69,34 @@ body {
                 display: inline-block;
             }
         }
-
+        .cover{
+            background: #eeeeee;
+            height: 200px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            &:before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                height: 100%;
+            }
+            .cover-img{
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                display: block;
+                height: auto;
+            }
+        }
+        .thumbnail-holder{
+            display: inline-block;
+            &:before {
+                content: '缩略图';
+            }
+        }
         .thumbnail {
             position: absolute;
             right: 15px;

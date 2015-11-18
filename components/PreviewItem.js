@@ -11,7 +11,6 @@ export default class PreviewItem extends Component {
                 <span className="thumbnail">
                 </span>
                 <div className="editor-item-edit">
-
                     <a data-tip data-for='icon-preview'><i className="fa fa-eye"></i></a>
                     <a data-tip data-for='icon-edit' href="javascript:void(0)" onClick={() => onItemClick(key)}>
                         <i className="fa fa-pencil"></i></a>
