@@ -8,24 +8,26 @@ export default class PreviewItem extends Component {
         return (
             <div className="editor-item">
                 <div className="cover">
-                    <img className="cover-img" />
+                    <img className="cover-img"/>
                     <span className="thumbnail-holder"></span>
-                </div>
-                <div className="editor-item-edit">
-                    <a data-tip data-for='icon-preview'><i className="fa fa-eye"></i></a>
-                    <a data-tip data-for='icon-edit' href="javascript:void(0)" onClick={() => onItemClick(key)}>
-                        <i className="fa fa-pencil"></i></a>
-                    <a data-tip data-for='icon-delete' href="javascript:void(0)" onClick={() => onDelete(key)}>
-                        <i className="fa fa-trash"></i></a>
-                    <ReactTooltip id='icon-preview' type='warning' effect="solid">
-                        <span>瀏覽</span>
-                    </ReactTooltip>
-                    <ReactTooltip id='icon-edit' type='warning' effect="solid">
-                        <span>編輯</span>
-                    </ReactTooltip>
-                    <ReactTooltip id='icon-delete' type='warning' effect="solid">
-                        <span>刪改</span>
-                    </ReactTooltip>
+                    <h4 className="title">title</h4>
+
+                    <div className="editor-item-edit">
+                        <a data-tip data-for='icon-preview'><i className="fa fa-eye"></i></a>
+                        <a data-tip data-for='icon-edit' href="javascript:void(0)" onClick={() => onItemClick(key)}>
+                            <i className="fa fa-pencil"></i></a>
+                        <a data-tip data-for='icon-delete' href="javascript:void(0)" onClick={() => onDelete(key)}>
+                            <i className="fa fa-trash"></i></a>
+                        <ReactTooltip id='icon-preview' type='warning' effect="solid">
+                            <span>瀏覽</span>
+                        </ReactTooltip>
+                        <ReactTooltip id='icon-edit' type='warning' effect="solid">
+                            <span>編輯</span>
+                        </ReactTooltip>
+                        <ReactTooltip id='icon-delete' type='warning' effect="solid">
+                            <span>刪改</span>
+                        </ReactTooltip>
+                    </div>
                 </div>
             </div>
         );
