@@ -14,13 +14,17 @@ function addArticle(state) {
         digest: '',
         showCoverPic: false,
         content: '',
-        contentSourceUrl: ''
+        contentSourceUrl: '',
+        onEditing:false
     }];
 }
 
 function deleteArticle(state, articleIdx) {
     state.splice(articleIdx, 1);
     return [...state];
+}
+function onEditing(state, articleIdx) {
+   
 }
 
 export default function article(state = initialState, action = undefined) {
@@ -32,6 +36,10 @@ export default function article(state = initialState, action = undefined) {
         case types.DELETE_ARTICLE:
             return {
                 articles: deleteArticle(state.articles, action.articleIdx)
+            };
+        case types.ON_EDITING:
+            return {
+                articles: onEditing(state.articles, action.articleIdx)
             };
         default:
             return state;

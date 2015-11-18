@@ -2,7 +2,7 @@
 
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { addArticle, editArticle, deleteArticle } from '../actions'
+import { addArticle, editArticle, deleteArticle,changePosition,onEditing } from '../actions'
 import PreviewItem from '../components/PreviewItem'
 import Cover from '../components/Cover'
 
@@ -20,6 +20,7 @@ class Preview extends Component {
                             <PreviewItem
                                 key={key}
                                 article={article}
+                                onEditingClick={() => dispatch(onEditing(key))}
                                 onItemClick={() => dispatch(editArticle(key))}
                                 onDelete={() => dispatch(deleteArticle(key))}
                             />

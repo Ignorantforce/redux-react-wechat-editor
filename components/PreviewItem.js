@@ -5,9 +5,9 @@ import  ReactTooltip from 'react-tooltip'
 
 export default class PreviewItem extends Component {
     render() {
-        const { key, article, onItemClick, onDelete } = this.props;
+        const { key, article, onItemClick, onDelete,onEditingClick } = this.props;
         return (
-            <div className="editor-item">
+            <div className="editor-item"onClick={() => onEditingClick(key)}>
                 <span className="thumbnail">
                 </span>
                 <div className="editor-item-edit">
@@ -17,7 +17,6 @@ export default class PreviewItem extends Component {
                     <a data-tip data-for='icon-delete' href="javascript:void(0)" onClick={() => onDelete(key)}>
                         <i className="fa fa-trash"></i></a>
                     <div className="">
-
 
                     </div>
                     <ReactTooltip id='icon-preview' type='warning' effect="solid">

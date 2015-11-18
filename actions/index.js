@@ -21,3 +21,15 @@ export function deleteArticle(articleIdx) {
         articleIdx: articleIdx
     }
 }
+export function changePosition(articleIdx) {
+    return {
+        type: types.CHANGE_POSITION,
+        articleIdx: articleIdx
+    }
+}
+export function onEditing(articleIdx) {
+    return {
+        type: types.ON_EDITING,
+        articleIdx: articleIdx
+    }
+}
