@@ -2,7 +2,7 @@ body {
   background: #f0e68c;
 }
 
-.editor-preview {
+.wechat-editor {
   float: left;
   width: 354px;
   height: 730px;
@@ -10,4 +10,60 @@ body {
   position: relative;
   margin-left: 15px;
   background: url("/images/mobile-warp.png") top left no-repeat;
+  .editor-preview {
+    width: 100%;
+    height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-user-select: none;
+  }
+  .preview-items {
+    width: 100%;
+  }
+  .editor-add {
+    padding: 14px 15px;
+    border-top: 1px solid #ddd;
+    display: block;
+    .editor-add-btn {
+      cursor: pointer;
+      display: block;
+      padding: 17px 0;
+      text-align: center;
+      border: 2px dotted #ccc;
+      color: #bbb;
+      &:hover {
+        i {
+          color: rgb(161, 240, 137);
+        }
+      }
+    }
+  }
+  .editor-item {
+    position: relative;
+    min-height: 90px;
+    border-top: 1px solid #ddd;
+    .editor-item-edit {
+      display: none;
+    }
+    .thumbnail{
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 60px;
+      height: 60px;
+      background: #eeeeee;
+      border: 1px solid #dddddd;
+      &:after{
+        content: '缩略图';
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        line-height: 60px;
+      }
+    }
+  }
 }
+
+

@@ -9,17 +9,23 @@ class Preview extends Component {
     render() {
         const { dispatch, articles } = this.props;
         return (
-            <div className="col-xs-6">
-                {articles.map(
-                    (article, key) =>
-                        <PreviewItem
-                            key={key}
-                            article={article}
-                            onItemClick={() => dispatch(editArticle(key))}
-                            onDelete={() => dispatch(deleteArticle(key))}
+            <div>
+                <div className="preview-items">
+                    {articles.map(
+                        (article, key) =>
+                            <PreviewItem
+                                key={key}
+                                article={article}
+                                onItemClick={() => dispatch(editArticle(key))}
+                                onDelete={() => dispatch(deleteArticle(key))}
                             />
-                )}
-                <a onClick={() => dispatch(addArticle())}>Add</a>
+                    )}
+                </div>
+                <div className="editor-add" onClick={() => dispatch(addArticle())}>
+                    <span className="editor-add-btn">
+                        <i className="fa fa-plus"></i>
+                    </span>
+                </div>
             </div>
         )
     }

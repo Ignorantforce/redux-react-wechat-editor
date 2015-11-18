@@ -22,7 +22,7 @@ const finalCreateStore = compose(
 const store = finalCreateStore(reducer);
 
 render(
-    <div>
+    <div className="wechat-editor">
         <Provider store={store}>
             <Editor />
         </Provider>
