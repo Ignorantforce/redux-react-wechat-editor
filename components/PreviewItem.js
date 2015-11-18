@@ -11,8 +11,9 @@ export default class PreviewItem extends Component {
 
                 </span>
                 <div className="editor-item-edit">
-                    <a href="javascript:void(0)" onClick={() => onItemClick(key)}>Edit</a>
-                    <a href="javascript:void(0)" onClick={() => onDelete(key)}>Delete</a>
+                    <a href="javascript:void(0)"><i className="fa fa-eye"></i></a>
+                    <a href="javascript:void(0)" onClick={() => onItemClick(key)}><i className="fa fa-pencil"></i></a>
+                    <a href="javascript:void(0)" onClick={() => onDelete(key)}><i className="fa fa-trash"></i></a>
                 </div>
             </div>
         );

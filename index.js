@@ -22,10 +22,12 @@ const finalCreateStore = compose(
 const store = finalCreateStore(reducer);
 
 render(
-    <div className="wechat-editor">
-        <Provider store={store}>
-            <Editor />
-        </Provider>
+    <div className="wechat-editor-wrap">
+        <div className="wechat-editor">
+            <Provider store={store}>
+                <Editor />
+            </Provider>
+        </div>
     </div>,
     document.getElementById('wechat-article-editor')
 );
