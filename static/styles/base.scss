@@ -8,7 +8,9 @@ body {
     padding-right: 40px;
 
 }
-
+.editor{
+    position: relative;
+}
 .wechat-editor {
     float: left;
     width: 349px;
@@ -22,6 +24,7 @@ body {
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-user-select: none;
+        position: relative;
     }
     .preview-items {
         width: 100%;
@@ -91,6 +94,9 @@ body {
                 display: block;
                 height: auto;
             }
+            .thumbnail-holder {
+                margin-top: -10px;
+            }
         }
         .title {
             color: #ffffff;
@@ -140,6 +146,44 @@ body {
         }
 
     }
+    .active-arrow{
+        position: absolute;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        height: 20px;
+        transition: top .3s linear;
+        &:before{
+            content: "\f0da";
+            font-family: FontAwesome;
+            color: rgb(161, 240, 137);
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            left: -20px;
+            font-weight: normal;
+            font-style: normal;
+            display: inline-block;
+            text-decoration: inherit;
+            font-size: 28px;
+        }
+        &:after{
+            content: "\f0d9";
+            font-family: FontAwesome;
+            color: rgb(161, 240, 137);
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            right: -40px;
+            font-weight: normal;
+            font-style: normal;
+            display: inline-block;
+            text-decoration: inherit;
+            font-size: 28px;
+
+        }
+    }
+
 }
 
 

@@ -16,6 +16,10 @@ export default class PreviewItem extends Component {
                         <i className="fa fa-pencil"></i></a>
                     <a data-tip data-for='icon-delete' href="javascript:void(0)" onClick={() => onDelete(key)}>
                         <i className="fa fa-trash"></i></a>
+                    <div className="">
+
+
+                    </div>
                     <ReactTooltip id='icon-preview' type='warning' effect="solid">
                         <span>瀏覽</span>
                     </ReactTooltip>

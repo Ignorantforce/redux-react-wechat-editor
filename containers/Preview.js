@@ -5,11 +5,13 @@ import { connect } from 'react-redux'
 import { addArticle, editArticle, deleteArticle } from '../actions'
 import PreviewItem from '../components/PreviewItem'
 import Cover from '../components/Cover'
+
 class Preview extends Component {
     render() {
         const { dispatch, articles } = this.props;
         return (
-            <div>
+            <div className="editor-preview">
+
                 <div className="preview-items">
                     <Cover>
                     </Cover>
