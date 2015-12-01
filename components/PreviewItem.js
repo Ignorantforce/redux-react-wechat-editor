@@ -3,14 +3,17 @@
 import React, { Component, PropTypes } from 'react'
 import  ReactTooltip from 'react-tooltip'
 
+
 export default class PreviewItem extends Component {
+
     render() {
         const { key, article, onItemClick, onDelete,onEditingClick } = this.props;
+
         return (
-            <div className="editor-item"onClick={() => onEditingClick(key)}>
+            <div className="editor-item " id={article.ArticleId}>
                 <span className="thumbnail">
                 </span>
-                <div className="editor-item-edit">
+                <div className="editor-item-edit"  onClick={() => onEditingClick(key)}>
                     <a data-tip data-for='icon-preview'><i className="fa fa-eye"></i></a>
                     <a data-tip data-for='icon-edit' href="javascript:void(0)" onClick={() => onItemClick(key)}>
                         <i className="fa fa-pencil"></i></a>

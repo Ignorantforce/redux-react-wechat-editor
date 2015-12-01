@@ -8,14 +8,15 @@ const initialState = {
 
 function addArticle(state) {
     return [...state, {
+        ArticleId: Math.floor(Math.random() * 0xFFFF),
         title: '',
         thumbMediaId: '',
         author: '',
         digest: '',
         showCoverPic: false,
         content: '',
-        contentSourceUrl: '',
-        onEditing:false
+        contentSourceUrl: ''
+
     }];
 }
 
@@ -23,8 +24,9 @@ function deleteArticle(state, articleIdx) {
     state.splice(articleIdx, 1);
     return [...state];
 }
-function onEditing(state, articleIdx) {
-   
+function onEditing(state, editingIdx) {
+    state.onEditing = editingIdx;
+    return [...state];
 }
 
 export default function article(state = initialState, action = undefined) {
@@ -39,7 +41,7 @@ export default function article(state = initialState, action = undefined) {
             };
         case types.ON_EDITING:
             return {
-                articles: onEditing(state.articles, action.articleIdx)
+                articles: onEditing(state.articles, action.editingIdx)
             };
         default:
             return state;

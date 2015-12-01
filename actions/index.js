@@ -2,12 +2,14 @@
 
 import * as types from '../constants/ActionTypes'
 
+
 export function addArticle() {
     return {
-        type: types.ADD_ARTICLE
-    };
-}
+        type: types.ADD_ARTICLE,
 
+
+};
+}
 export function editArticle(articleIdx) {
     return {
         type: types.EDIT_ARTICLE,
@@ -30,6 +32,6 @@ export function changePosition(articleIdx) {
 export function onEditing(articleIdx) {
     return {
         type: types.ON_EDITING,
-        articleIdx: articleIdx
+        editingIdx: articleIdx
     }
 }

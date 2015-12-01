@@ -1,5 +1,4 @@
 'use strict';
-
 import React, { Component, PropTypes } from 'react'
 import  ReactTooltip from 'react-tooltip'
 export default class PreviewItem extends Component {
